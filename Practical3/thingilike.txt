@@ -1,0 +1,17 @@
+i like beef
+i like walnut
+i very like peaceful life
+i like reading novels
+i like zgr
+i don't like cold weather
+i like life
+<<<<<<< HEAD
+i like cloudy sky
+i like plants
+=======
+i like perfume
+i like cosmetics
+i like green
+i like blue
+i like myself
+>>>>>>> nishan
