@@ -1,0 +1,14 @@
+Question:
+What proportion of cases have died (as of the latest information) in Germany? 
+What proportion of cases have died in the UK? 
+
+Line number:
+68-122
+
+Discuss the result:
+From 2020-01-27 to 2020-03-30, the proportion of cases have died in both Germany and UK have increased over time.
+Before 2020-03-03, the proportion rate was close to zero for both country.
+After 2020-03-03, the proportion rate had a big increase for both country.
+For Germany, the proportion rate was well controlled and mainly lower than 0.01.
+For the UK, the proportion rate has veen increasing at a rapid rate.
+In 2020-03-30, the proportion rate of UK even exceeded 0.06.
