@@ -1,0 +1,14 @@
+By comparing each edit distance,
+I find the edit distance of mouse and human is the smallest,
+which means that the protein sequence of mouse and human is relatively similar. 
+It is no suprise that the edit distance of mouse and random is very close to human and random's.
+
+Through the scores and BLAST-like visual alignment based of blossum62,
+we have a clearer understanding of the similarity of human and mouse.
+The score of mouse and random is equal to human and random's, they are all below 0 (-250).
+On the other hand, the score of human and mouse is 1091, which is a very large positive number.
+Furthermore, the BLAST-like visual alignment of human and mouse gives a very intuitive explanation.
+All of these suggest that there is a strong similarity between human and mouse's protein sequence.
+
+Compared to edit distance, scores and BLAST-like visual alighment is more concise and intuition. 
+
