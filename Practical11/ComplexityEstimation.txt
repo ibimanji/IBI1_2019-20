@@ -1,0 +1,3 @@
+We recurse one time plus one, and we multiply the statement constant times N times.
+This constant is the number of statements executed per recursive function, 
+so it's O(numbers of statement * N), i.e O(N).

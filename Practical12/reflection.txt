@@ -1,0 +1,13 @@
+The practical was quite hard for me. 
+At first, I even don't know how to use random.choice function with a probability. Let alone the method to count the number of people infected and recoverd.
+Then I looked up a lot of information on the Internet: grammar, use cases, etc.
+In the process of writing the code, I was deeply troubled by a problem: 
+How do you plot the number of people in each situation over a continuous period of time?
+To solve this problem, I even used complex differential equations.
+Finally, I learned that what we were asked to show was the repeated operation that produces an independent one hundred time points rather than a continuous period.
+Therefore, what I need to do was just loop over 1000 time points.
+Besides, in spatial_SIR, I wanted the output to be a random continuous animation, but I tried and failed.
+My final output was one hundred random images, which didn't seem very elegant. I'm still trying to improve it.
+All in all, in this practical, I learned some useful and interesting tools like random.choice and np.where.
+In addition, I could use the matplotlib library more proficiently. I could not only change the color and thickness of the lines, but also add a background grid.
+I really enjoyed this experiment, and I think it's very practical since the SIR model is very popular these days.
