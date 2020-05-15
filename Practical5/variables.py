@@ -4,7 +4,7 @@ Created on Wed Mar 11 11:42:30 2020
 
 @author: yly
 """
-#4.1some simple math
+##4.1some simple math
 a=654
 b=654654
 c=b%7
@@ -20,11 +20,14 @@ elif a>e:
     print ("e is greater than a")
 else:
     print ("a and e are equal")
-#4.2booleans   
+    
+##4.2booleans
+#giving booleans variable x and y, calculate the value of z
 x=True
 y=False
-z=(x and not y)or(y and not x)
+z=(x and not y)or(y and not x) 
 w=(x!=y)
+#print z and w to verify the consistence of them
 if z==w:
     print("w and z are the same")
 else:

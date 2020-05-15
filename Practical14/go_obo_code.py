@@ -17,38 +17,63 @@ DOMTree=xml.dom.minidom.parse('go_obo.xml') #using DOM to parse go_obo.xml
 collection=DOMTree.documentElement #root
 terms=collection.getElementsByTagName('term')
 
-Id=[]
-Name=[]
-definition=[]
-childnodes=[]
+defs=[]
+is_a=[]
+dic={}
 
-#define a function to find the number of childnodes
-def childnode(a):
-    global terms
-    childnodes=0
-    for term in terms:
-        is_a=term.getElementsByTagName('is_a')
-        for parent in is_a:
-            if parent.childNodes[0].data==a:
-                childnodes+=1
-                b=term.getElementsByTagName('id')[0].childNodes[0].data
-                childnodes+=childnode(b)
-    return childnodes
-
-#get all contents in <defstr>
 for term in terms:
-    defs=term.getElementsByTagName('def')[0]
-    defstr=defs.getElementsByTagName('defstr')[0].childNodes[0].data
-    if defstr.find('autophagosome')>-1 or defstr.find('Autophagosome')>-1:
-        a=term.getElementsByTagName('id')[0].childNodes[0].data
-        Id.append(a)
-        Name.append(term.getElementsByTagName('name')[0].childNodes[0].data)
-        definition.append(defstr)
-        childnodes.append(childnode(a))
+    definitions=term.getElementsByTagName('def')
+    IDs=term.getElementsByTagName('id')[0]
+    is_as=term.getElementsByTagName('is_a')#get 'is_a'
+    for x in is_as:
+        is_a.append(x.childNodes[0].data)
+    dic[IDs.childNodes[0].data]=is_a[:]
+    is_a.clear()
+    for definition in definitions:
+        defstr=definition.getElementsByTagName('defstr')[0]
+        defs.append(defstr.childNodes[0].data)    
+#count the number of 'autophagosome'
+a=[]
+for x in range(len(defs)):
+    if 'autophagosome' in defs[x]:
+        a.append(x)
+#store the detailed information
+ids=[]
+names=[]
+d=[]
+for i in a:
+    IDs=terms.item(i).getElementsByTagName('id')[0]
+    ids.append(IDs.childNodes[0].data)
+    NAMEs=terms.item(i).getElementsByTagName('name')[0]
+    names.append(NAMEs.childNodes[0].data)
+    d.append(defs[i])
+    
+#find the number of childnodes
+childnode = []
+for i in ids:
+    m = []
+    count = 0
+    for j in dic:
+        if i in dic[j]:
+            count += 1#count a the general list
+            m.append (j)
+    n = m[:]
+    inc = count
+    while inc != 0 :#count a single list
+        m = []
+        inc = 0
+        for k in n:
+            for j in dic:
+                if k in dic[j]:
+                    count += 1#count the total elements
+                    inc += 1
+                    m.append (j)
+        n = m[:]
+    childnode.append (count)
         
 #output the data into an excel file
-file={'id':Id,'Name':Name,'definition':definition,'childnodes':childnodes}
-dataframe=pd.DataFrame(file)
-dataframe.to_excel(r'C:\Users\yly\desktop\IBI1\IBI1_2019-20\Practical14\autophagosome.xlsx')
+data={'id':ids,'name':names,'definition':d,'childnodes':childnode}
+dataframe=pd.DataFrame(data)
+dataframe.to_excel(r'autophagosome.xlsx')
 
 print('DONE!')

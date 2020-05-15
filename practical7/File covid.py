@@ -4,6 +4,7 @@ Created on Sun Apr  5 18:18:46 2020
 
 @author: yly
 """
+#import necessary libraries
 import os
 import pandas as pd
 import numpy as np
@@ -23,7 +24,8 @@ for i in range(len(b)):
     else:
         continue
 #computed the mean and median of new cases for the entire world
-#created a boxplot of new cases worldwide    
+#created a boxplot of new cases worldwide
+#using list, array and append method
 my_columns_2 = [True, True, True, True, False,False] 
 c= covid_data.iloc[:,my_columns_2]
 d=c.values
@@ -65,7 +67,13 @@ plt.ylabel("numbers")
 plt.title("a boxplot of both new cases and new deaths worldwide")
 plt.grid(alpha=0.2)
 plt.show()
-#There is the code to answer the question in txt
+
+##There is the code to answer the question in txt
+#compare the proportion of cases have died in Germany and UK
+'''
+similar method as before,
+Repeat the operation twice because I want to compare
+'''
 my_columns_3 = [True, True, False, False, True, True] 
 e= covid_data.iloc[:,my_columns_3]
 f=e.values

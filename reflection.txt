@@ -1,0 +1,8 @@
+In this IBI1 courese, I learned a lot. Not only do I got the basic knowledge of navigating a Unix-like system, but also some basic grammers of python.
+In the process of learning and practice, I felt 'suffering while enjoying'.
+I have never learned programming language before. I used to think that programming was very advanced and out of my reach.
+When I really learned it, I found it was true that programming was difficult. In order to complete the course exercises, I consulted a lot of materials and kept discussing with my classmates.
+But at the same time, I felt the charm of programming. It has a strong reality, can be intuitive and convenient to achieve many biological purposes.
+Besides, the formative portfolio feedback help me a lot. I not only learned the importance of pseudocode, but I also learned more deeply that better code gives users a better experience.
+I was even a little reluctant when I finished the last practical. I would like to continue to explore the application of programming in biology out of class.
+Looking forward to the next semester!
